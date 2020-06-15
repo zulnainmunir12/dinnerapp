@@ -49,6 +49,16 @@ flutter:
    - mall.png
    - account.png
    - r.png
+   - g.png
+   - f.png
+   - background.png
+   - rails.png
+   - cuisine.png
+   - areas.png
+   - gluten.png
+   - charts.png
+   - rs.png
+   - feature_background.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

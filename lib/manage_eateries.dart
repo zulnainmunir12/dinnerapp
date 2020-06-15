@@ -1,3 +1,5 @@
+import 'package:dinnerApp/account_details.dart';
+import 'package:dinnerApp/sign_out.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -118,7 +120,11 @@ class _Manage extends State<ManageEateries> {
                 children: <Widget>[
                   IconButton(
                     icon: Image.asset('account.png'),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context)=>AccountDetail()
+                      ));
+                    },
                   ),
                   SizedBox(
                     width: 30,
@@ -139,7 +145,9 @@ class _Manage extends State<ManageEateries> {
             Row(
               children: <Widget>[
                 FlatButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>SignOut()));
+                  },
                   child: Text(
                     'Sign out',
                     style: TextStyle(

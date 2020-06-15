@@ -40,8 +40,9 @@ class _Splash extends State<Splash> {
                 child: Container(),
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  SizedBox(width: 125,),
+
                   Text(
                     'Part of',
                     style: TextStyle(color: Colors.white.withOpacity(0.7),fontSize: 20),
@@ -49,7 +50,8 @@ class _Splash extends State<Splash> {
                   SizedBox(width: 4,),
                   Text('LynasDining',style: TextStyle(fontSize:22,color: Colors.white,fontWeight: FontWeight.bold),)
                 ],
-              )
+              ),
+              SizedBox(height: 20,),
             ],
           ),
         ));
