@@ -1,6 +1,6 @@
 import 'package:dinnerApp/splash.dart';
 import 'package:flutter/material.dart';
-import 'where_to_eat.dart';
+import 'discover.dart';
 
 
 void main() => runApp(MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: WhereToEatPage()
+        home: DiscoverPage()
     );
   }
 }
