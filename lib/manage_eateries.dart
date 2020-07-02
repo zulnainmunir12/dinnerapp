@@ -1,4 +1,5 @@
 import 'package:dinnerApp/account_details.dart';
+import 'package:dinnerApp/notification.dart';
 import 'package:dinnerApp/sign_out.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -177,6 +178,7 @@ class _Manage extends State<ManageEateries> {
                 color: Color.fromRGBO(54, 191, 54, 2),
               ),
               IconButton(
+                onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>NotificationsPage()));},
                 icon: Image.asset(
                   'bell.png',
                   color: Color.fromRGBO(54, 191, 54, 2),

@@ -140,7 +140,7 @@ class _SingleItemPageState extends State<SingleItemPage> {
                 children: <Widget>[
                   ClipRRect(
                     child: Image.asset(
-                      "background.png",
+                      "rails.png",
                       height: 80,
                       width: MediaQuery.of(context).size.width,
                       fit: BoxFit.fitWidth,

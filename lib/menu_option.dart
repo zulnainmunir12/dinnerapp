@@ -1,77 +1,178 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
-class MenuOptionPage extends StatefulWidget {
-  @override
-  _MenuOptionPageState createState() => _MenuOptionPageState();
+class MenuOption extends StatefulWidget {
+  _Menu createState() {
+    return _Menu();
+  }
 }
 
-class _MenuOptionPageState extends State<MenuOptionPage> {
+class _Menu extends State<MenuOption> {
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        elevation: 0,
+        leading: IconButton(
+          icon: Icon(
+              Icons.arrow_back,
+              color: Colors.black
+          ),
+          onPressed: () => Navigator.pop(context),
+        ),
         backgroundColor: Colors.white,
-        title: Text(
-          "Menu options",
-          style: TextStyle(color: Colors.black),
+        title: Row(
+          children: <Widget>[
+            Text("Menu option",style: TextStyle(color: Colors.black),),
+            SizedBox(width: 170,),
+            Icon(Icons.info,color: Color.fromRGBO(67, 151, 67, 1),)
+          ],
         ),
       ),
-      body: Container(
-        width: MediaQuery.of(context).size.width,
-        child: ListView.builder(
-            itemCount: 3,
-            itemBuilder: (BuildContext context, int index) {
-              return Container(
-                child: Row(mainAxisAlignment: MainAxisAlignment.center,
-//                    padding: EdgeInsets.all(10),
-                    children: <Widget>[
-                      Stack(
-                        children: <Widget>[
-
-                          Container(
-//                    padding: EdgeInsets.all(10),
-                            width: MediaQuery.of(context).size.width * 0.8,
-                            height: 125,
-                            decoration: BoxDecoration(
-                                color: Color(0xffF6C70E),
-                                borderRadius: BorderRadius.circular(10)),
-                          ),
-              Container(
-              width: MediaQuery.of(context).size.width * 0.8,child:Row(children: <Widget>[   Image.asset(
-                            "gluten.png",
-//                            width: MediaQuery.of(context).size.width * 0.8,
-//                            height: 150,
-//                            fit: BoxFit.fill,
-                          )],mainAxisAlignment: MainAxisAlignment.end,)),
-                          Container(
-                            width: MediaQuery.of(context).size.width * 0.8,
-                            height: 125,
-                            alignment: Alignment.center,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[Text(
-                                "Gluten Free",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold),
-                              ),Text(
-                                "23 eateries",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 18,),
-                              ),],),
-                          )
-                        ],
-                      )
-                    ]),
-                margin: EdgeInsets.symmetric(vertical: 10),
-              );
-            }),
-      ),
+      body: ListView(children: <Widget>[
+        Column(
+          children: <Widget>[
+            SizedBox(height: 10,),
+            Center(
+              child: Container(
+                width: 360,
+                height: 130,
+                decoration: BoxDecoration(
+                  color: Colors.orange.withOpacity(0.6),
+                  borderRadius: BorderRadius.circular(8)
+                ),
+                child: Center(child: Column(
+                  children: <Widget>[
+                    SizedBox(height: 40,),
+                    Text('Gluten free',style: TextStyle(color: Colors.white,fontSize: 17),),
+                    SizedBox(height: 5,),
+                    Text('23 eatries',style: TextStyle(color: Colors.white.withOpacity(0.9)),)
+                  ],
+                ),),
+              ),
+            ),
+            SizedBox(height: 10,),
+            Center(
+              child: Container(
+                width: 360,
+                height: 130,
+                decoration: BoxDecoration(
+                    color: Colors.green.withOpacity(0.6),
+                    borderRadius: BorderRadius.circular(8)
+                ),
+                child: Center(child: Column(
+                  children: <Widget>[
+                    SizedBox(height: 40,),
+                    Text('Vegetarian',style: TextStyle(color: Colors.white,fontSize: 17),),
+                    SizedBox(height: 5,),
+                    Text('23 eatries',style: TextStyle(color: Colors.white.withOpacity(0.9)),)
+                  ],
+                ),),
+              ),
+            ),
+            SizedBox(height: 10,),
+            Center(
+              child: Container(
+                width: 360,
+                height: 130,
+                decoration: BoxDecoration(
+                    color: Colors.lightGreen.withOpacity(0.6),
+                    borderRadius: BorderRadius.circular(8)
+                ),
+                child: Center(child: Column(
+                  children: <Widget>[
+                    SizedBox(height: 40,),
+                    Text('Vegan',style: TextStyle(color: Colors.white,fontSize: 17),),
+                    SizedBox(height: 5,),
+                    Text('23 eatries',style: TextStyle(color: Colors.white.withOpacity(0.9)),)
+                  ],
+                ),),
+              ),
+            ),
+            SizedBox(height: 10,),
+            Center(
+              child: Container(
+                width: 360,
+                height: 130,
+                decoration: BoxDecoration(
+                    color: Colors.blueAccent.withOpacity(0.6),
+                    borderRadius: BorderRadius.circular(8)
+                ),
+                child: Center(child: Column(
+                  children: <Widget>[
+                    SizedBox(height: 40,),
+                    Text('Dairy free',style: TextStyle(color: Colors.white,fontSize: 17),),
+                    SizedBox(height: 5,),
+                    Text('23 eatries',style: TextStyle(color: Colors.white.withOpacity(0.9)),)
+                  ],
+                ),),
+              ),
+            ),
+            SizedBox(height: 10,),
+            Center(
+              child: Container(
+                width: 360,
+                height: 130,
+                decoration: BoxDecoration(
+                    color: Colors.purple.withOpacity(0.6),
+                    borderRadius: BorderRadius.circular(8)
+                ),
+                child: Center(child: Column(
+                  children: <Widget>[
+                    SizedBox(height: 40,),
+                    Text('Lactose free',style: TextStyle(color: Colors.white,fontSize: 17),),
+                    SizedBox(height: 5,),
+                    Text('23 eatries',style: TextStyle(color: Colors.white.withOpacity(0.9)),)
+                  ],
+                ),),
+              ),
+            ),
+            SizedBox(height: 10,),
+            Center(
+              child: Container(
+                width: 360,
+                height: 130,
+                decoration: BoxDecoration(
+                    color: Colors.pink.withOpacity(0.6),
+                    borderRadius: BorderRadius.circular(8)
+                ),
+                child: Center(child: Column(
+                  children: <Widget>[
+                    SizedBox(height: 40,),
+                    Text('Egg free',style: TextStyle(color: Colors.white,fontSize: 17),),
+                    SizedBox(height: 5,),
+                    Text('23 eatries',style: TextStyle(color: Colors.white.withOpacity(0.9)),)
+                  ],
+                ),),
+              ),
+            ),
+            SizedBox(height: 10,),
+            Center(
+              child: Container(
+                width: 360,
+                height: 130,
+                decoration: BoxDecoration(
+                    color: Colors.yellow.withOpacity(0.6),
+                    borderRadius: BorderRadius.circular(8)
+                ),
+                child: Center(child: Column(
+                  children: <Widget>[
+                    SizedBox(height: 40,),
+                    Text('Fish free',style: TextStyle(color: Colors.white,fontSize: 17),),
+                    SizedBox(height: 5,),
+                    Text('23 eatries',style: TextStyle(color: Colors.white.withOpacity(0.9)),)
+                  ],
+                ),),
+              ),
+            ),
+          ],
+        )
+      ],),
     );
   }
 }

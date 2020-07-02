@@ -24,6 +24,7 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.3
+  flutter_credit_card:
 
 dev_dependencies:
   flutter_test:
@@ -51,14 +52,18 @@ flutter:
    - r.png
    - g.png
    - f.png
-   - background.png
-   - rails.png
-   - cuisine.png
-   - areas.png
-   - gluten.png
-   - charts.png
    - rs.png
-   - feature_background.png
+   - ac.png
+   - assets/images/login_back.png
+   - assets/images/logo.png
+   - map.png
+   - map2.png
+   - rails.png
+   - background.png
+   - card.png
+   - assets/google.png
+
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -72,7 +77,12 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
+  fonts:
+    - family: DomusRegular
+      fonts:
+        - asset: assets/fonts/Domus-App-Regular.ttf
+        - asset: assets/fonts/Domus-App-Bold.ttf
+          weight: 700
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf

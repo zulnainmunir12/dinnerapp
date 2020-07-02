@@ -1,3 +1,4 @@
+import 'package:dinnerApp/login.dart';
 import 'package:dinnerApp/nav_menu.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +27,7 @@ class _Password extends State<NewPassword> {
                 constraints: BoxConstraints.expand(height: 180),
                 decoration: BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage('logo2.png'), fit: BoxFit.fill)),
+                        image: AssetImage('assets/images/login_back.png'), fit: BoxFit.fill)),
                 child: Stack(
                   children: <Widget>[
                     Positioned(
@@ -35,7 +36,7 @@ class _Password extends State<NewPassword> {
 //                        Navigator.push(context, MaterialPageRoute(
 //                          builder: (context){return ResetPassword();}
 //                      ));
-                        },
+                      },
                         icon: Icon(
                           Icons.arrow_back,
                           color: Colors.white,
@@ -57,9 +58,18 @@ class _Password extends State<NewPassword> {
               Center(
                 child: Column(
                   children: <Widget>[
-                    Text(
-                      'Create new Password',
-                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+                    Column(
+                      children: <Widget>[
+                        Text(
+                          'Create new Password',
+                          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+                        ),
+                        SizedBox(height: 5,),
+                        Text(
+                            'Create a new strong and memorable\npassword to protect your account',
+                          style: TextStyle(fontSize: 18,color: Colors.black),
+                        )
+                      ],
                     ),
                     SizedBox(
                       height: 20,
@@ -82,7 +92,7 @@ class _Password extends State<NewPassword> {
                                 enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                         color: Color.fromRGBO(238, 238, 238, 2))),
-                                hintText: "Email Address",
+                                hintText: "New Password (8+ character)",
                                 hintStyle: TextStyle(
                                     color: Color.fromRGBO(165, 165, 165, 2)),
                               ),
@@ -109,7 +119,7 @@ class _Password extends State<NewPassword> {
                                 enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                         color: Color.fromRGBO(238, 238, 238, 2))),
-                                hintText: "Email Address",
+                                hintText: "Confirm new password",
                                 hintStyle: TextStyle(
                                     color: Color.fromRGBO(165, 165, 165, 2)),
                               ),
@@ -118,8 +128,17 @@ class _Password extends State<NewPassword> {
                         ],
                       ),
                     ),
+                    SizedBox(height: 15,),
+                    Row(
+                      children: <Widget>[
+                        SizedBox(width: 40,),
+                        Icon(Icons.check,color:Color.fromRGBO(54, 191, 54, 2) ,),
+                        SizedBox(width: 15,),
+                        Text('Passwords match',style: TextStyle(color:Color.fromRGBO(54, 191, 54, 2),fontSize: 18,fontWeight: FontWeight.w500),)
+                      ],
+                    ),
                     SizedBox(
-                      height: 10,
+                      height: 120,
                     ),
                     SizedBox(
                       width: 330,
@@ -140,19 +159,9 @@ class _Password extends State<NewPassword> {
                           onPressed: () {
                             Navigator.push(context,
                                 MaterialPageRoute(builder: (context) {
-                                  return NavMenu();
+                                  return Login();
                                 }));
                           }),
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Text(
-                      'Success, new password created.',
-                      style: TextStyle(
-                          fontSize: 18,
-                          color: Color.fromRGBO(54, 191, 54, 2),
-                          fontWeight: FontWeight.bold),
                     ),
                   ],
                 ),

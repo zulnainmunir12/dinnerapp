@@ -1,3 +1,4 @@
+import 'package:dinnerApp/discover.png.dart';
 import 'package:dinnerApp/send_bill.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -66,7 +67,9 @@ class _SignOut extends State<SignOut> {
                                 fontSize: 25,
                                 fontWeight: FontWeight.bold),
                           ),
-                          onPressed: () {}),
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>DiscoverPage()));
+                          }),
                     ),
                     SizedBox(
                       width: 8,

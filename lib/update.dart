@@ -1,4 +1,5 @@
 import 'package:dinnerApp/features.dart';
+import 'package:dinnerApp/pay.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -14,26 +15,22 @@ class _Update extends State<Update> {
     return showDialog(
         context: context,
         builder: (BuildContext context) {
-          return Dialog(
+          return AlertDialog(
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(15.0))),
-              child: Container(
-//                width: 320,
-//                height: 140,
+                  borderRadius: BorderRadius.all(Radius.circular(20.0))),
+              content: Container(
+                width: 320,
+                height: 140,
                 child: Column(
-                  mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    SizedBox(
-                      height: 15,
-                    ),
                     ListTile(
                       title: Text(
                         "It's time to update",
                         style: TextStyle(
                             fontSize: 25, fontWeight: FontWeight.bold),
-                      )),
-                      ListTile(   subtitle: Text(
-                        "We've made some changes, please download the latest update.",
+                      ),
+                      subtitle: Text(
+                        "We've made some changes\n please download the latest",
                         style: TextStyle(fontSize: 16, color: Colors.black),
                       ),
                     ),
@@ -41,30 +38,28 @@ class _Update extends State<Update> {
                       height: 10,
                     ),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
                       children: <Widget>[
-//                        SizedBox(
-//                          width: 25,
-//                        ),
-                        FlatButton(
-                          onPressed: () {
-                            Navigator.pop(context);
-                          },
-                          child: Text(
-                            'Remind me later',
-                            style: TextStyle(color: Colors.black, fontSize: 15),
-                          ),
+                        SizedBox(
+                          width: 80,
                         ),
                         FlatButton(
                           onPressed: () {
-
-                            Navigator.pop(context);
+                            Navigator.push(context, MaterialPageRoute(
+                              builder: (context)=>PayPage()
+                            ));
                           },
                           child: Text(
-                            'Update now',
+                            'later',
+                            style: TextStyle(color: Color.fromRGBO(54, 191, 54, 2), fontSize: 17,fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        FlatButton(
+                          onPressed: () {},
+                          child: Text(
+                            'Update ',
                             style: TextStyle(
                                 color: Color.fromRGBO(54, 191, 54, 2),
-                                fontSize: 15),
+                                fontSize: 17,fontWeight: FontWeight.bold),
                           ),
                         ),
                       ],
@@ -125,10 +120,10 @@ class _Update extends State<Update> {
                       side: BorderSide(color: Color.fromRGBO(54, 191, 54, 2))),
                   color: Color.fromRGBO(54, 191, 54, 2),
                   child: Text(
-                    'Update now',
+                    'Update',
                     style: TextStyle(
                         color: Colors.white,
-                        fontSize: 18,
+                        fontSize: 25,
                         fontWeight: FontWeight.bold),
                   ),
                   onPressed: () {
@@ -141,7 +136,7 @@ class _Update extends State<Update> {
             child: SizedBox(
               width: 360,
               height: 50,
-              child: FlatButton(
+              child: RaisedButton(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5.0),
                       side: BorderSide(color: Colors.grey.withOpacity(0.5))),
@@ -150,7 +145,7 @@ class _Update extends State<Update> {
                     'Later',
                     style: TextStyle(
                         color: Colors.black,
-                        fontSize: 18,
+                        fontSize: 25,
                         fontWeight: FontWeight.bold),
                   ),
                   onPressed: () {
